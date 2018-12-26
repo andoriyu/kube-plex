@@ -67,6 +67,8 @@ spec:
           - name: https
             containerPort: 32443
         env:
+        - name: ADVERTISE_IP
+          value: "{{ .Values.advertise_ip }}"
         - name: TZ
           value: "{{ .Values.timezone }}"
         # TODO: move this to a secret?
